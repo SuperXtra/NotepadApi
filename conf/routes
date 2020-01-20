@@ -1,0 +1,16 @@
+# Getting users list
+GET     /users                      controllers.HomeController.getUsers
+
+POST    /register                   controllers.HomeController.registerUser
+PUT     /password/update            controllers.HomeController.updatePassword
+
+
+POST    /note                       controllers.HomeController.createNote
+GET     /notes/:userId              controllers.HomeController.retrieveUserNotes(userId: Int)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+GET     /                           controllers.Default.redirect(to = "/users")
