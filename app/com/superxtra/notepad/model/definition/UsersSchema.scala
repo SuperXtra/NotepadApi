@@ -6,7 +6,7 @@ import slick.jdbc.H2Profile.api._
 
 object UsersSchema {
   class UsersTable(tag: Tag) extends Table[User](tag, "USERS")  {
-    def id = column[Int]("ID", O.AutoInc, O.PrimaryKey)
+    def id = column[Long]("ID", O.AutoInc, O.PrimaryKey)
     def name = column[String]("NAME")
     def lastName = column[String]("LAST_NAME")
     def email = column[String]("EMAIL")
