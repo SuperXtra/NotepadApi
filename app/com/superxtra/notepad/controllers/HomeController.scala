@@ -1,11 +1,11 @@
-package controllers
+package com.superxtra.notepad.model.controllers
 
+import com.superxtra.notepad.model.{Note, UserDto}
+import com.superxtra.notepad.model.dto.{NoteDto, UpdatePasswordDto}
+import com.superxtra.notepad.model.services.UsersService
 import javax.inject._
-import model.dto.{NoteDto, UpdatePasswordDto}
-import model.{_}
 import play.api.mvc._
 import play.api.libs.json.{JsError, Json, Reads}
-import services.UsersService
 
 import scala.concurrent.{ExecutionContext, Future}
 
