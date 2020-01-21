@@ -1,9 +1,6 @@
 package com.superxtra.notepad.model
 
 import play.api.libs.json._
-import slick.lifted.{TableQuery, Tag}
-import slick.jdbc.JdbcProfile
-import slick.model.Table
 
 case class User(id: Int, name: String, lastName: String, email: String)
 

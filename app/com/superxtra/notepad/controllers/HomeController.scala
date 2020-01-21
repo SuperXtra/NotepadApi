@@ -1,8 +1,8 @@
-package com.superxtra.notepad.model.controllers
+package com.superxtra.notepad.controllers
 
+import com.superxtra.notepad.dto.{NoteDto, UpdatePasswordDto}
 import com.superxtra.notepad.model.{Note, UserDto}
-import com.superxtra.notepad.model.dto.{NoteDto, UpdatePasswordDto}
-import com.superxtra.notepad.model.services.UsersService
+import com.superxtra.notepad.services.UsersService
 import javax.inject._
 import play.api.mvc._
 import play.api.libs.json.{JsError, Json, Reads}

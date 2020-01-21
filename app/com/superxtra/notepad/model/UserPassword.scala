@@ -1,8 +1,6 @@
 package com.superxtra.notepad.model
 
 import play.api.libs.json._
-import slick.jdbc.H2Profile.api._
-import slick.lifted.Tag
 
 case class UserPassword(id: Int, password: String, userId: Int)
 

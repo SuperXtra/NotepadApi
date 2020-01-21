@@ -1,13 +1,13 @@
-package com.superxtra.notepad.model.services
+package com.superxtra.notepad.services
 
-import com.superxtra.notepad.model.dto.{NoteDto, UpdatePasswordDto}
-import com.superxtra.notepad.model.repository.UserRepo
+import com.superxtra.notepad.dto.{NoteDto, UpdatePasswordDto}
 import com.superxtra.notepad.model.{Note, User, UserDto, UserPassword}
+import com.superxtra.notepad.repository.UserRepo
 import javax.inject.Inject
-import slick.dbio.{Effect, NoStream}
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+
 
 class UsersService @Inject() (userRepository: UserRepo){
   def createNote(note: NoteDto): Future[Int] = userRepository.createNote(Note(0, note.title, note.body, note.userId))
