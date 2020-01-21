@@ -64,8 +64,8 @@ class UserRepo @Inject()
     db.run(tx)
   }
 
-  def createNote(note: Note): Future[Int] = db.run {
-      notes += note
+  def createNote(title: String, body: String, userId: Int): Future[Int] = db.run {
+    notes += Note(0, title, body, userId)
   }
 
   def getNotes(id: Int): Future[List[Note]] = db.run {
@@ -84,5 +84,4 @@ class UserRepo @Inject()
     val q = for { p <- passwords if p.userId === id} yield p.password
     db.run(q.update(password))
   }
-
 }
