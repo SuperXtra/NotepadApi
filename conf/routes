@@ -1,11 +1,11 @@
 # Getting users list
-GET     /users                      com.superxtra.notepad.controllers.HomeController.getUsers
-POST    /register                   com.superxtra.notepad.controllers.HomeController.registerUser
-PUT     /password/update            com.superxtra.notepad.controllers.HomeController.updatePassword
+GET     /users                      com.superxtra.notepad.controllers.UserController.getUsers
+POST    /register                   com.superxtra.notepad.controllers.UserController.registerUser
+PUT     /password/update            com.superxtra.notepad.controllers.PasswordController.updatePassword
 
 
-POST    /note                       com.superxtra.notepad.controllers.HomeController.createNote
-GET     /notes/:userId              com.superxtra.notepad.controllers.HomeController.retrieveUserNotes(userId: Int)
+POST    /note                       com.superxtra.notepad.controllers.NoteController.createNote
+GET     /notes/:userId              com.superxtra.notepad.controllers.NoteController.retrieveUserNotes(userId: Int)
 
 
 # Map static resources from the /public folder to the /assets URL path
