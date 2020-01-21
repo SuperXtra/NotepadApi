@@ -2,7 +2,7 @@ package com.superxtra.notepad.model
 
 import play.api.libs.json._
 
-case class UserPassword(id: Int, password: String, userId: Int)
+case class UserPassword(id: Long, password: String, userId: Long)
 
 object UserPassword {
 

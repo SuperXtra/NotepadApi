@@ -18,11 +18,11 @@ class PasswordDAO @Inject()
   import profile.api._
   import com.superxtra.notepad.model.definition.UsersPasswordSchema.usersPassword
 
-  def getPassword(id: Int): Future[Option[UserPassword]] = db.run {
+  def getPassword(id: Long): Future[Option[UserPassword]] = db.run {
     usersPassword.filter(_.userId === id).result.headOption
   }
 
-  def updatePassword(id: Int, password: String): Future[Int] = {
+  def updatePassword(id: Long, password: String): Future[Int] = {
     val q = for { p <- usersPassword if p.userId === id} yield p.password
     db.run(q.update(password))
   }

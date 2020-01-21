@@ -6,9 +6,9 @@ import slick.jdbc.H2Profile.api._
 
 object UsersPasswordSchema{
   class UsersPasswordTable(tag: Tag) extends Table[UserPassword](tag, "USERS_PASSWORD") {
-      def id = column[Int]("ID", O.AutoInc, O.PrimaryKey)
+      def id = column[Long]("ID", O.AutoInc, O.PrimaryKey)
       def password = column[String]("PASSWORD")
-      def userId = column[Int]("USER_ID")
+      def userId = column[Long]("USER_ID")
       def user = foreignKey("USER_FK", userId, TableQuery[UsersSchema.UsersTable])(_.id, onUpdate = ForeignKeyAction.Restrict, onDelete = ForeignKeyAction.Cascade)
       override def * = (id, password, userId) <> ((UserPassword.apply _).tupled, UserPassword.unapply)
     }

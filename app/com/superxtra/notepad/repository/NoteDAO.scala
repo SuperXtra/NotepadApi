@@ -17,11 +17,11 @@ class NoteDAO @Inject()
   import profile.api._
   import com.superxtra.notepad.model.definition.NotesSchema.notes
 
-  def createNote(title: String, body: String, userId: Int): Future[Int] = db.run {
+  def createNote(title: String, body: String, userId: Long): Future[Int] = db.run {
     notes += Note(0, title, body, userId)
   }
 
-  def getNotes(id: Int): Future[List[Note]] = db.run {
+  def getNotes(id: Long): Future[List[Note]] = db.run {
     notes.filter(_.userId === id).to[List].result
   }
 }

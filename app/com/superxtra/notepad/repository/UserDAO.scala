@@ -21,7 +21,7 @@ class UserDAO @Inject()
 
 
 
-  def getUserById(id: Int): Future[Option[User]] = db.run {
+  def getUserById(id: Long): Future[Option[User]] = db.run {
     users.filter(_.id === id).result.headOption
   }
 
