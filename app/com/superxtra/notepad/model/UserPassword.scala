@@ -1,4 +1,4 @@
-package model
+package com.superxtra.notepad.model
 
 import play.api.libs.json._
 import slick.jdbc.H2Profile.api._

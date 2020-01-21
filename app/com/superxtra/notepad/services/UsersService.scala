@@ -1,9 +1,9 @@
-package services
+package com.superxtra.notepad.model.services
 
+import com.superxtra.notepad.model.dto.{NoteDto, UpdatePasswordDto}
+import com.superxtra.notepad.model.repository.UserRepo
+import com.superxtra.notepad.model.{Note, User, UserDto, UserPassword}
 import javax.inject.Inject
-import model.dto.{NoteDto, UpdatePasswordDto}
-import model.{Note, User, UserDto, UserPassword}
-import repository.UserRepo
 import slick.dbio.{Effect, NoStream}
 
 import scala.concurrent.Future

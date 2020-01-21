@@ -1,7 +1,7 @@
-package repository
+package com.superxtra.notepad.model.repository
 
+import com.superxtra.notepad.model.{Note, User, UserPassword}
 import javax.inject.{Inject, Singleton}
-import model.{Note, User, UserPassword}
 import play.api.db.slick.DatabaseConfigProvider
 import slick.jdbc.JdbcProfile
 
