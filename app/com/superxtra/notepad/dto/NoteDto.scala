@@ -1,4 +1,4 @@
-package com.superxtra.notepad.model.dto
+package com.superxtra.notepad.dto
 
 import play.api.libs.json.Json
 

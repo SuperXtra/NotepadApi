@@ -1,4 +1,4 @@
-package com.superxtra.notepad.model.repository
+package com.superxtra.notepad.repository
 
 import com.superxtra.notepad.model.{Note, User, UserPassword}
 import javax.inject.{Inject, Singleton}

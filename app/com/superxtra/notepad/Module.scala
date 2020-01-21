@@ -1,4 +1,4 @@
-package com.superxtra.notepad.model
+package com.superxtra.notepad
 
 import java.time.Clock
 

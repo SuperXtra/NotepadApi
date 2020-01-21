@@ -1,8 +1,8 @@
-package com.superxtra.notepad.model.services
+package com.superxtra.notepad.services
 
-import com.superxtra.notepad.model.dto.{NoteDto, UpdatePasswordDto}
-import com.superxtra.notepad.model.repository.UserRepo
+import com.superxtra.notepad.dto.{NoteDto, UpdatePasswordDto}
 import com.superxtra.notepad.model.{Note, User, UserDto, UserPassword}
+import com.superxtra.notepad.repository.UserRepo
 import javax.inject.Inject
 import slick.dbio.{Effect, NoStream}
 
